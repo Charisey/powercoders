@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Git SheetCheat</title>
-</head>
-<body>
-<h1>Git cheatsheet</h1>
+  <head>
+    <title>Git SheetCheat</title>
+  </head>
+  <body>
+  <h1>Git cheatsheet</h1>
+    <div id="introduction">
+      <h2>Git Fundamentals</h2>
+      <p><strong>Three locations:</strong> Working directory, index, repository. <br/>Git commands copy files between these locations</p>
+      <p>the repository is a sort of online directory when you are working on a project with multiple people, you can put your local files to the repository (thanks to the "commit" command and the "push" command)
+       then, everyone can get your files or your modifications (by using the "pull" command). <br/> <strong>The Working Directory</strong>
+       is the specific folder where you're working on your own pc. The goal is to share it on the <strong>REPOSITORY</strong>
+       (online plateform for sharing project)</p>
+     </div>
+     <div id="fundamentals">
+       <h3>The process</h3>
+        <ul>
+          <li>Open CMD</li>
+          <li>Go to the directory that you want to share by command "cd 'name of dir'..."</li>
+          <li>We have to tell Git where the "root" of the repository is, for that type "git init": <br/>A hidden folder will appear on the working directory :<br/><br/><img src="githide.png" alt="hidenfolder"></li><br/>
+          <li>Then type "git status" as you can see no commit has been commited yet:<br/>The red text is the file who aren't prepared to be commited: <br/><br/><img src="gitstatus.png" alt="git status"></li><br/>
+          <li>For copying the file from the directory to the queue for the commit type "git add name of the file.ext". Nothing change, it's normal. </li>
+          <li>Type again "git status" the file is green, now we can commit the directory <br/><br/><img src="gitstatus2.png" alt="git status 2"></li><br/>
+          <li>To commit the file from the working directory to the local repository "git commit -m "your comment":Nothing happen, it's normal. The file is now commited.<br/><br/><img src="gitcommit.png" alt="git commit succefully"></li>
+        </ul>
+    </div>
+    <div id="Git_Push">
+      <h3>Git push</h3>
+        <p>Before the pushing to the online repository, we have to configure the local repository</p>
+        <ul>
+          <li>After creating a acount on github, return to CMD and type: git remote add origin https://github.com/user/poco-yourname.git (with your own id)</li>
+          <li>Optional: Type git remote -v to verify all your configurations already done in the same directory. <br/><br/> <img src="gitremote.png" alt="Git Remote"></li>
+        </ul>
 
-</body>
+        <h3>Push comit to Github</h3>
+          <ul>
+            <li>git push -u origin master - <strong>first time</strong></li>
+            <li>git push - <strong>after that</strong></li>
+          </ul>
+
+    </div>
+  </body>
 </html>

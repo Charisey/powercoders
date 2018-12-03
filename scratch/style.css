@@ -1,3 +1,7 @@
+p{
+  color: rgb(59, 110, 97);
+}
+
 p.warning {
   background-color: red;
   color: white;

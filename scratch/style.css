@@ -1,3 +1,16 @@
+p.warning {
+  background-color: red;
+  color: white;
+  font-style: bold;
+  padding: .5em 1em;
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px black;
+}
+
+p.warning::before {
+  content:"WARNING!:"
+}
+
 p em{
   font-style: normal;
   text-decoration: underline;

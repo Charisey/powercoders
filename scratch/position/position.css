@@ -1,0 +1,8 @@
+body {
+  border: 1px solid black;
+}
+
+.pos-static {
+  position: static;
+  background-color: yellow;
+}

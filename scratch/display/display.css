@@ -1,0 +1,16 @@
+span{
+  border: 1px solid black;
+  background: rgba(255, 255, 0, .5)
+}
+
+span.inline{
+  display: inline; /* The default */
+}
+
+span.block{
+  display: block;
+}
+
+span.inline-block{
+  display: inline-block;
+}

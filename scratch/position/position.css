@@ -1,8 +1,29 @@
 body {
   border: 1px solid black;
+  position: relative;
+}
+
+div {
+  position: relative;
 }
 
 .pos-static {
   position: static;
   background-color: yellow;
+}
+
+.pos-relative{
+  position: relative;
+  background-color: blue;
+  color: white;
+  top: 20px;
+  left: 10px;
+}
+
+.pos-absolute {
+  position: absolute;
+  background-color: red;
+  color: white;
+  top: 20px;
+  left: 10px;
 }

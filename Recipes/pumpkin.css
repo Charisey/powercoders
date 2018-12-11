@@ -1,0 +1,38 @@
+#ingredients {
+  position: absolute;
+  right: 30%;
+  width: 30%;
+}
+
+}
+
+
+ul {
+  text-align:center;
+}
+
+h1,h2{
+  font-family: 'Dosis', sans-serif;
+  background-color:rgba(219, 213, 193, 0.52);
+  font-style: bold;
+  padding: .5em 1em;
+  border-radius: 5px;
+  font-family: 'Acme', sans-serif;
+  color:#E2B019
+}
+
+div{
+  font-family: 'Crimson Text', serif;
+}
+
+p{
+  font-family: 'Oxygen Mono', monospace;
+}
+img{
+  position: relative;
+  height: 75%;
+  width: 60%;
+  padding-left: 40%;
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}

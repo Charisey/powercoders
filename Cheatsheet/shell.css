@@ -1,0 +1,23 @@
+h1 , h2{
+  font-family: 'Lato', sans-serif;
+  color: rgb(255, 255, 255);
+  border: 1px solid;
+  border-radius: 15px ;
+  background-color: rgb(59, 64, 129)
+  }
+
+#titre {
+  border: 1px solid;
+}
+
+body {
+  border: 1px solid;
+}
+
+p , ol{
+  font-family: 'Merriweather', serif;
+}
+
+div{
+  font-family: 'Nanum Gothic Coding', monospace;
+}

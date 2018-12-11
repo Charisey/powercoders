@@ -1,0 +1,80 @@
+body{
+  margin-block-start: 150px;
+  margin-block-end: 150px;
+  margin-left: 200px;
+  margin-right: 200px;
+
+}
+
+#leho{
+  color: rgb(44, 76, 96);
+  border: 1px solid;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.86)
+}
+
+.id{
+  margin-left: 50px;
+  margin-right: 100px;
+}
+
+h1 , h3{
+  margin-left: 50px;
+  margin-right: 200px;
+}
+
+#photo{
+  padding: 20px;
+  display: inline-block;
+  height:100%;
+  width:auto;
+  border: 5px;
+  border-radius: 50%;
+
+  position:relative;
+}
+
+#contactID{
+  display:inline-block
+}
+
+.rightcolumn{
+      top: 0;
+      bottom: 0;
+      right:0;
+}
+
+.subleft{
+	display:inline-block;
+}
+
+.subright{
+	display:inline-block;
+}
+
+#milieu{
+  border: 1px solid;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-top: 25px;
+  background:rgba(255, 255, 255, 0.86);
+}
+
+h2{
+   margin-left: 10px;
+}
+
+h1,h2,h3{
+  font-family: 'Alegreya Sans', sans-serif;
+ }
+
+div{
+  font-family: 'Playfair Display', serif;
+}
+
+p{
+  font-family: 'Overpass Mono', monospace;
+}

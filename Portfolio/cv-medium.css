@@ -1,0 +1,32 @@
+body{
+  margin-block-start: 75px;
+  margin-block-end: 75px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+h1, h3 {
+  margin-left: 30px;
+  margin-right: 100px;
+}
+
+#photo{
+  padding-bottom:0px;
+}
+
+.subleft, .subright{
+  font-size:12px;
+}
+
+.id{
+  margin-left:30px;
+  margin-right:30px;
+}
+
+#milieu ul{
+  font-size:15px;
+}
+
+#contactID{
+  margin-bottom:20px;
+}

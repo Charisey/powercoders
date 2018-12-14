@@ -3,15 +3,16 @@
   <head>
     <title>change_para_class</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="setClass.js"></script>
+    <script src="setClass.js"></script>  <!-- ce qui relis au code JS -->
   </head>
   <body>
-    <p id="mypara"> This is a paragraph of text that can change style. Use the options below to change how this looks.</p>
+    <p id="mypara"> This is a paragraph of text that can change style.
+      Use the options below to change how this looks.</p>
 
     <ul>
-      <li onclick="setClassWarning(event);">Make it warning</li>
-      <li onclick="setClassTip(event);">Make it tip</li>      <!-- les noms des classes seront réutilisés pour les fonctions afin de leur donner une action-->
-      <li onclick="clearClass(event);">Make it normal</li>
+      <li onclick="setClass(event, 'warning');">Make it warning</li>
+      <li onclick="setClass(event, 'tip');">Make it tip</li>      <!-- les noms des classes seront réutilisés pour les fonctions afin de leur donner une action-->
+      <li onclick="setClass(event, '');">Make it normal</li>
     </ul>
 
     <p class="warning"> This is an example warning.</p>

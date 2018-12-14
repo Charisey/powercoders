@@ -1,8 +1,8 @@
 .warning, .tip{
-  padding: .5;
+  padding: .5em;
   border-radius: .25em;
-  border-color: rgba(0, 0, 0, 25)
-  color: rgb(255, 255, 255)
+  border-color: rgba(0, 0, 0, .5);
+  color: rgb(255, 255, 255);
 }
 
 .warning {

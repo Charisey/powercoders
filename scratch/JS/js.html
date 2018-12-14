@@ -3,39 +3,14 @@
   <head>
     <title>change_para_class</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="setClass.js"></script>
   </head>
   <body>
-
-    <script>
-      // Java script code goes here
-      console.log('My code is running!')
-
-      function greet(name) {
-        console.log('Hello, ' + name);
-      }
-
-      function setClassTip(event) {
-        let el = document.getElementById('mypara');
-        el.className = 'tip';
-      }
-
-      function setClassWarning(event) {
-        let el = document.getElementById('mypara');
-        el.className = 'warning';
-      }
-
-      function setClassClear(event) {
-      let el = document.getElementById('mypara');
-      el.className = ''; // Quand rien n arrive ne rien mettre dans les quotes
-      }
-
-   </script>
-
     <p id="mypara"> This is a paragraph of text that can change style. Use the options below to change how this looks.</p>
 
     <ul>
       <li onclick="setClassWarning(event);">Make it warning</li>
-      <li onclick="setClassTip(event);">Make it tip</li>
+      <li onclick="setClassTip(event);">Make it tip</li>      <!-- les noms des classes seront réutilisés pour les fonctions afin de leur donner une action-->
       <li onclick="clearClass(event);">Make it normal</li>
     </ul>
 

@@ -20,10 +20,13 @@ function createNewListItem(itemName) {
 
 document.addEventListener('DOMContentLoaded', function (event) {
   document.querySelector('button').addEventListener('click', function (event) {
-    let textBox = document.getElementById('item');
-    console.log(textBox.value);
-    let li = createNewListItem(textBox.value);
-    let ul = document.querySelector('ul');
-    ul.appendChild(li);
+    document.querySelector('ul').appendChild(createNewListItem(document.getElementById('item').value));
   });
+
+  document.querySelector('input').addEventListener('keyup', function (event) {
+    if(event.key === 'Enter'){
+      document.querySelector('ul').appendChild(createNewListItem(document.getElementById('item').value));
+    }
+  });
+
 });

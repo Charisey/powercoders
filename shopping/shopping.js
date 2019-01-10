@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
   document.querySelector('input').addEventListener('keyup', function (event) {
     if(event.key === 'Enter'){
       document.querySelector('ul').appendChild(createNewListItem(document.getElementById('item').value));
+      document.getElementById('item').value = ''; // ce qui va permettre d'effacer ce qu il y a ds imputbox après une saisie
+
     }
   });
 

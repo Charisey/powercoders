@@ -10,6 +10,7 @@ function createNewListItem(itemName) {
 
   deleteButton.addEventListener('click', function (event) {
     li.remove();
+    document.getElementById("item").focus();
     console.log('Delete button clicked: ' + itemName);
   });
 
@@ -17,18 +18,28 @@ function createNewListItem(itemName) {
 
   return li;
 }
-
+//ce qui est en rapport avec le click
 document.addEventListener('DOMContentLoaded', function (event) {
+  let inputBox = document.getElementById('item');
+  let shoppingList =  document.querySelector('ul');
+
   document.querySelector('button').addEventListener('click', function (event) {
-    document.querySelector('ul').appendChild(createNewListItem(document.getElementById('item').value));
+    if (inputBox.value.trim() !== '') {
+      shoppingList.appendChild(createNewListItem(inputBox.value.trim()));
+      inputBox.value = '';
+    }
+    inputBox.focus();
   });
-
-  document.querySelector('input').addEventListener('keyup', function (event) {
-    if(event.key === 'Enter'){
-      document.querySelector('ul').appendChild(createNewListItem(document.getElementById('item').value));
-      document.getElementById('item').value = ''; // ce qui va permettre d'effacer ce qu il y a ds imputbox après une saisie
-
+// ce qui est en rapport avec la touche Entrer
+  inputBox.addEventListener('keyup', function (event) {
+    if (inputBox.value.trim() !== ''){  // true // Ce qui va permettre au moment ou on press enter de n executer rien ds la liste ( trim supprime les espace avant et après la saisie)
+      if (event.key === 'Enter'){ // Ce qui permet d'executer l'item saisit dans la liste
+        shoppingList.appendChild(createNewListItem(inputBox.value.trim()));
+        inputBox.value = ''; // ce qui va permettre d'effacer ce qu il y a ds imputBox après une saisie
+      }
     }
   });
 
+  inputBox.focus();
 });
+

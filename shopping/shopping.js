@@ -1,10 +1,10 @@
 function createNewListItem(itemName) {
-  let li = document.createElement('li');
-  let span = document.createElement('span');
+  const li = document.createElement('li');
+  const span = document.createElement('span');
   span.innerText = itemName;
   li.appendChild(span);
 
-  let deleteButton = document.createElement('button');
+  const deleteButton = document.createElement('button');
   deleteButton.innerText = 'Delete';
   li.appendChild(deleteButton);
 
@@ -20,9 +20,9 @@ function createNewListItem(itemName) {
 }
 //ce qui est en rapport avec le click
 document.addEventListener('DOMContentLoaded', function (event) {
-  let inputBox = document.getElementById('item');
-  let shoppingList =  document.querySelector('ul');
-  let addItemButton = document.querySelector('button');
+  const inputBox = document.getElementById('item');
+  const shoppingList =  document.querySelector('ul');
+  const addItemButton = document.querySelector('button');
 
   document.querySelector('button').addEventListener('click', function (event) {
     if (inputBox.value.trim() !== '') {

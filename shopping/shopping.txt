@@ -1,0 +1,130 @@
+Description of the content shopping.js 
+
+Line 1: Example by Nik 
+Declares a function called `createNewListItem`. This function takes one parameter, called `itemName`.
+
+Line 2: Example by Nik
+Calls the `createElement` method on the DOM object in the global `document` variable. It passes a single string parameter, 
+`li`, to the method, creating a new `li` element in the DOM. 
+This element is not attached to any other element. The new element is returned and saved in to the constant 
+variable called `listItem`.
+
+Line 3: We are creating the span element who doesn't exist yet in the DOM: For that we create a 
+variable called "span". Then, in the document, we create a new Element with the Method createElement: 
+In the parentheses, we write the name of the new ELement. Here the element is ('span').
+
+Line 4: Span is a variable. Here we are assigning the itemName which is the value in the text box, 
+to the innerText property of span.
+
+Line 5: The Method "appendChild", is for appending an element to an another.
+Here, we append the 'span' to the 'li'. We are telling here that the "span" is the 
+child of "li".
+
+Line 6: BlankSpace
+
+Line 7: We are creating the Delete Button who doesn't exist yet in the DOM (Same Line 2/3) : 
+For that we create a variable called "deleteButton". Then, in the document, we create a new 
+Element by the Method createElement. In the parentheses, we write the name of the new ELement. 
+Here the element is ('button').
+
+Line 8: Same as "Line 4" but this time, with the "deleteButton".
+
+Line 9:Same as "Line 5" The Method "appendChild", is for appending an element to an another,
+Here we append  the "deleteButton" to the "li". We are telling here that the "button" is the 
+child of "li".
+
+Line 10: BlankSpace
+
+Line 11: We are telling to JS to watch for an action : In our case, it's when we 'click' on the deleteButton.
+Then some function will be called (Line 12 to 14).
+
+Line 12: When we click the button 'Delete', the 'li' will be removed. 
+
+Line 13: In the document. , get ElementbyID("item") : item, is what we write in the textBox. So, when we remove an "li",
+we are going to use the function .focus() to return automatically the cursor to the textBox. 
+
+Line 14: End of the function Event Listener
+
+Line 15: BlanckSpace
+
+Line 16: The .querySelector Method is used for selecting an element in the html 
+who doesn't have an ID. We are using this method in the line 16 to append "li"
+(that we already declared by the Method .createElement) to the 'ul' who does't have 
+an ID but exist in the html. That is the reason why we called 'ul' by the .querySelector Method.  
+
+Line 18: Return the element 'li'. When we will call the function later (on line 28 for exemple),
+the function will return the value of 'li' so it will be usable by our code outside of the function.
+
+Line 19: The end of the function createNewListItem
+
+Line 20: My personal commentary
+
+Line 21: We are telling to JS to watch for an action : In our case, it's when we the page will be loaded.
+Then some function will be called.
+
+Line 22: With the method getElementById('item'), we select the element whose ID is "item" in the document.
+We then put this element in a variable called inputBox.
+
+Line 23: With the method querySelector('ul'), we select the 'ul' in the document.
+We then put this element in a variable called shoppingList.
+
+Line 24: With the method querySelector('button'), we select the 'button' in the document.
+We then put this element in a variable called addItemButton.
+
+Line 25: BlankSpace
+
+Line 26: We add an evenListener to the addItemButton. Thanks to this method, the JS will
+watch for an action (a click on the addItemButton in our case), and will execute the code in 
+the function.
+
+Line 27: If the value in the input box is not equal to '', then the JS will read the code between
+line 27 and 30. The function trim() is for erasing the blankspaces before and after the words/phrases in the inputBox.
+
+Line 28: We put the value of the inputBox in the function createNewListItem. Thanks to the resturn
+on line 18, the function will return the li newly created by this same function. We then append
+this li to the existing shoppingList.
+
+Line 29: We remove any text present in the inputBox by putting it's value equal to ''.
+
+Line 30: The end of the "if" statement line 27
+
+Line 31: We are using the function .focus() to return automatically the cursor to the inputBox.
+
+Line 32: BlankSpace
+
+Line 33: The end of the function used by the addEventListener line 26
+
+Line 34: My commentary
+
+Line 35: We add an evenListener to the inputBox. Thanks to this method, the JS will
+watch for an action (the 'keyup' on the inputBox), and will execute the code in 
+the function. (The action 'keyup' is when we press a key from our keybord).
+
+Line 36: (As line 27) If the value in the input box is not equal to '', then the JS will read the code between
+line 37 and 42. The function trim() is for erasing the blankspaces before and after the words/phrases in the inputBox.
+
+Line 37: When there's something in the inputBox, the attribute .disable will be disabled because it's equal to false so the color
+of the addItemButton will be black.   
+
+Line 38: If the key that has been pressed is 'Enter' then apply :
+
+Line 39: We put the value of the inputBox in the function createNewListItem. Thanks to the resturn
+on line 18, the function will return the li newly created by this same function. We then append
+this li to the existing shoppingList.
+
+Line 40: We remove any text present in the inputBox by putting it's value equal to ''.
+
+Line 41: The end of the "if" statement line 38
+
+Line 42: The end of the "if" statement line 36
+
+Line 43: BlankSpace
+
+Line 44: If the value in the input box is equal to '', then :
+
+Line 45: When there's something in the inputBox, the attribute .disable will be actif because it's equal to "true". 
+So the color of the addItemButton will be grey.
+
+Line 46: End of the "if" statement line 44
+
+Line 47: End of the function line 35     

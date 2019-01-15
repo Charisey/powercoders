@@ -1,0 +1,59 @@
+body {
+  background: url(perfect-pancakes.jpg) no-repeat center top; /* horz centré et top pour coller en haut*/
+  position: relative;
+  background-attachment: fixed; /* permet de fixer le background et le contenu peut se scroller */
+  background-size: cover; /* toute la page sera occupé en background */
+  min-height: 100%;
+  height:100%;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+
+
+.bloctext {
+  margin-top:0;
+  margin-bottom: 0;
+  margin-left:-25px;
+  text-align: justify;
+  padding-left: 15px;
+  padding-right: 40px;
+  width:40%;
+  height: 100%;
+  left: 30%;
+  position: absolute;
+  background-color: rgba(9, 0, 0, 0.43);
+  color: rgb(246, 246, 246)
+}
+
+h1{
+  margin-top: 60px;
+  margin-bottom: 70px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+h2 {
+  text-align: center;
+}
+
+span.show {
+  display: inline-block;
+  width: 1em;
+}
+
+span.hide{
+  display: none;
+}
+
+ul.show{
+  display: block;
+}
+
+ul.hide{
+  display: none;
+}

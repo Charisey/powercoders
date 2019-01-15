@@ -18,3 +18,57 @@ li{
   margin-top: 10px;
 }
 
+#head{
+  position: relative;
+  background: url('header.jpg') no-repeat center center;
+  background-size: cover;
+  height: 250px;
+  margin-left: initial;
+}
+
+#text{
+  position: absolute;
+  background-color: rgba(0,0,0,0.39);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  right: 23%;
+  display: flex;
+  align-items: center;
+  font-size: -webkit-xxx-large;
+  font-style: oblique;
+  color: aliceblue;
+  justify-content: center;
+}
+
+p{
+  position: absolute;
+  margin:0;
+}
+
+#box img{
+    width: 100%;
+    position: relative;
+    filter: blur(5px);
+}
+
+h1 {
+    position: absolute;
+    top: 8.5em;
+    left: 23em;
+}
+
+#BBB{
+    position: absolute;
+    top: 22em;
+    left: 46em;
+
+}
+
+
+.empty{
+    border: 3px solid #1b7121;
+}
+
+.

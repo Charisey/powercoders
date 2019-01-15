@@ -3,19 +3,29 @@
   <head>
     <title>shopping</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="shopping.js"></script>
   </head>
 
   <body>
-    <h1>My shopping list</h1>
-    <div>
-      <label for="item">Enter a new item:</label>    <!-- le for "item" ds le label dont être le même que le id ds le input; à l'occurance ici cest "item -->
-      <input type="text" id="item" placeholder="Type something to buy">
-      <button>Add item</button>
+  <div id ="head">
+    <div id="text"><p>Your Shopping list</p></div>
+  </div>
+
+    <div id ="box">
+      <img src="header3.png" alt="shoppingimage">
+      <h1><span class="titre">Shopping list</span></h1>
+      <div id="BBB">
+        <label for="item">Enter a new item:</label>    <!-- le for "item" ds le label dont être le même que le id ds le input; à l'occurance ici cest "item -->
+        <input type="text" id="item" placeholder="Type something to buy">
+        <i id="buttonAdd" class="fas fa-cart-plus"></i>
+      </div>
     </div>
 
     <ul>
 
     </ul>
+
+
   </body>
 </html>

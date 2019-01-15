@@ -1,80 +1,101 @@
-body{
-  margin-block-start: 150px;
-  margin-block-end: 150px;
-  margin-left: 200px;
-  margin-right: 200px;
-
-}
-
-#leho{
-  color: rgb(44, 76, 96);
-  border: 1px solid;
-  height: 100%;
-  width: 100%;
+#leho {
+  margin-right: 50%;
+  margin-left: 3%;
   position: relative;
-  background: rgba(255, 255, 255, 0.86)
-}
-
-.id{
-  margin-left: 50px;
-  margin-right: 100px;
-}
-
-h1 , h3{
-  margin-left: 50px;
-  margin-right: 200px;
 }
 
 #photo{
-  padding: 20px;
   display: inline-block;
-  height:100%;
   width:auto;
-  border: 5px;
-  border-radius: 50%;
-
-  position:relative;
+  border: .5px solid;
+  overflow: hidden;
 }
 
-#contactID{
-  display:inline-block
+#ref{
+  text-align: center;
+  font-size: 25px;
+  line-height: 10px;
 }
 
-.rightcolumn{
-      top: 0;
-      bottom: 0;
-      right:0;
-}
-
-.subleft{
-	display:inline-block;
-}
-
-.subright{
-	display:inline-block;
+#border{
+  border-top: 3px solid black;
+  margin-top: 5%;
 }
 
 #milieu{
-  border: 1px solid;
-  height: 100%;
-  width: 100%;
+  text-align: center;
+  list-style-type:none;
+  margin-top: 150px;
+  font-size: 25px;
+
+}
+
+.date{
+  font-weight : bolder;
+}
+
+.données{
+  font-weight : bolder;
+}
+
+ul {
+list-style:none;
+margin-left:0;
+padding-left:0;
+margin-bottom: 100px;
+}
+
+li {
+margin-bottom:10px;/* à adapter */
+}
+
+
+body{
+  position: absolute;
+  margin-left: 10%;
+}
+
+#banniere{
+  display: flex;
+  border-bottom: 1px solid;
+  margin-bottom: 80px;
   position: relative;
-  margin-top: 25px;
-  background:rgba(255, 255, 255, 0.86);
 }
 
-h2{
-   margin-left: 10px;
+#casechayma{
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+  border: 2px solid;
+  padding: 2px;
+  width: 360px;
+  background:white;
 }
 
-h1,h2,h3{
-  font-family: 'Alegreya Sans', sans-serif;
- }
-
-div{
-  font-family: 'Playfair Display', serif;
+#textchayma{
+  padding: 20px 30px;
+  background: black;
+  color: white;
+  z-index: 3;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
 }
 
-p{
-  font-family: 'Overpass Mono', monospace;
+#me {
+  margin-right: 5px;
+  height: 210px;
+  width: 200px;
+  background: url('photocv.jpg') no-repeat;
+  background-size: cover;
+}
+
+#bordure{
+  position: relative;
+  background: url('image cv.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
 }

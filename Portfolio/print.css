@@ -1,0 +1,85 @@
+#me-small {
+    width: 100%;
+}
+
+body {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    font-size:0.9em;
+    margin:0;
+    padding:0;
+    margin-bottom:3em;
+
+}
+
+span.date {
+    font-weight: bold;
+}
+
+#ref {
+    margin-top: 1em;
+    padding-bottom: 2em;
+    border-bottom: 2px solid black;
+}
+
+#ref p {
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+#milieu {
+    margin-top: 4em;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+#banniere{
+    display: flex;
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#casechayma{
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    border: 1px solid black;
+    padding: 2px;
+    width: 220px;
+    background-color: white;
+}
+
+#textchayma{
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    z-index: 3;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#me {
+    margin-right: 5px;
+    height: 150px;
+    width: 130px;
+    background: url('photocv.jpg') no-repeat;
+    background-size: cover;
+}
+
+#bordure{
+    position: relative;
+    background: url('image cv.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+}

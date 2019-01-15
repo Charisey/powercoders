@@ -11,7 +11,6 @@ function createNewListItem(itemName) {
   deleteButton.addEventListener('click', function (event) {
     li.remove();
     document.getElementById("item").focus();
-    console.log('Delete button clicked: ' + itemName);
   });
 
   document.querySelector('ul').appendChild(li);
@@ -24,29 +23,31 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const shoppingList =  document.querySelector('ul');
   const addItemButton = document.querySelector('button');
 
-  document.querySelector('button').addEventListener('click', function (event) {
-    if (inputBox.value.trim() !== '') {
-      shoppingList.appendChild(createNewListItem(inputBox.value.trim()));
-      inputBox.value = '';
-    }
+  addItemButton.addEventListener('click', function (event) {
+    const trimmedValue = inputBox.value.trim();
+
+    shoppingList.appendChild(createNewListItem(trimmedValue));
+    inputBox.value = '';
+    addItemButton.disabled = true;
     inputBox.focus();
-
   });
-// ce qui est en rapport avec la touche Entrer
+
   inputBox.addEventListener('keyup', function (event) {
-    if (inputBox.value.trim() !== ''){  // true // Ce qui va permettre au moment ou on press enter de n executer rien ds la liste ( trim supprime les espace avant et après la saisie)
-      addItemButton.disabled = false;
-      if (event.key === 'Enter'){ // Ce qui permet d'executer l'item saisit dans la liste
-        shoppingList.appendChild(createNewListItem(inputBox.value.trim()));
-        inputBox.value = ''; // ce qui va permettre d'effacer ce qu il y a ds imputBox après une saisie
-      }
+    const trimmedValue = inputBox.value.trim();
+    addItemButton.disabled = trimmedValue === '';
+
+    if (trimmedValue === '') {
+      return;
     }
 
-    if (inputBox.value.trim() === '') {
-      addItemButton.disabled = true;
+    if (event.key !== 'Enter') {
+      return;
     }
+
+    shoppingList.appendChild(createNewListItem(trimmedValue));
+    inputBox.value = '';
+    addItemButton.disabled = true;
+    inputBox.focus();
   });
-
-  inputBox.focus();
 });
 

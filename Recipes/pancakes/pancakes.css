@@ -1,4 +1,5 @@
 body {
+  font-family: 'Raleway', sans-serif;
   background: url(perfect-pancakes.jpg) no-repeat center top; /* horz centré et top pour coller en haut*/
   position: relative;
   background-attachment: fixed; /* permet de fixer le background et le contenu peut se scroller */
@@ -12,32 +13,69 @@ body {
   right: 0;
 }
 
-
+.darkerBG{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.45);
+}
 
 .bloctext {
-  margin-top:0;
-  margin-bottom: 0;
-  margin-left:-25px;
+  font-family: 'Raleway', sans-serif;
+  margin:0;
+  width:100%;
   text-align: justify;
-  padding-left: 15px;
-  padding-right: 40px;
-  width:40%;
-  height: 100%;
-  left: 30%;
+  display: flex;
   position: absolute;
-  background-color: rgba(9, 0, 0, 0.43);
-  color: rgb(246, 246, 246)
+  color: aliceblue;
+  top:300px;
+}
+
+.leftcol, .rightcol{
+  width:40%;
+  padding-left:5%;
+  padding-right:5%;
+  text-align: center;
+}
+
+.leftcol{
+  border-right:1px solid white;
+}
+
+.leftcol ul, .rightcol ol{
+  list-style: none;
+  padding:0;
+  line-height:26px;
 }
 
 h1{
-  margin-top: 60px;
+  letter-spacing: 6px;
+  font-family: 'Pacifico', cursive;
+  color: aliceblue;
+  font-weight:100;
+  text-decoration: none;
+  margin-top: 100px;
   margin-bottom: 70px;
   text-align: center;
-  text-decoration: underline;
+  position:absolute;
+  font-size:50px;
+  width:100%;
+}
+
+#Nutrition{
+  position:absolute;
+  color: aliceblue;
+  bottom:0;
+  font-size:12px;
+  width:100%;
+  text-align:center;
 }
 
 
 h2 {
+  font-family: 'Pacifico', cursive;
   text-align: center;
 }
 

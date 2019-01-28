@@ -11,18 +11,24 @@ function createNewListItem(itemName) {
     deleteButton.addEventListener('click', function (event) {
         li.remove();
         document.getElementById("item").focus();
+
+        const listItem = document.querySelectorAll('li');
+        const clearListButton = document.querySelector('#clear');
+            clearListButton.disabled = listItem.length === 0;
     });
 
     document.querySelector('ul').appendChild(li);
-
     return li;
 }
 //ce qui est en rapport avec le click
 document.addEventListener('DOMContentLoaded', function (event) {
     const inputBox = document.getElementById('item');
     const shoppingList =  document.querySelector('ul');
-    const addItemButton = document.querySelector('#buttonAdd');
+    const addItemButton = document.querySelector('#buttonAdd'); //s'il y a une id
+    const clearListButton = document.querySelector('#clear');
+
     addItemButton.disabled = true;
+    clearListButton.disabled = true;
     inputBox.className = 'empty';
 
     addItemButton.addEventListener('click', function (event) {
@@ -31,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         shoppingList.appendChild(createNewListItem(trimmedValue));
         inputBox.value = '';
         addItemButton.disabled = true;
+        clearListButton.disabled = true;
         inputBox.className = 'empty';
         inputBox.focus();
     });
@@ -38,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     inputBox.addEventListener('keyup', function (event) {
         const trimmedValue = inputBox.value.trim();
         addItemButton.disabled = trimmedValue === '';
+
 
         if (trimmedValue === '') {
             inputBox.className = 'empty';
@@ -50,12 +58,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
             return;
         }
 
+        clearListButton.addEventListener('click',  function (event) {
+           const ListItems = document.querySelectorAll('li');
+           ListItems.forEach(function(element){
+           element.remove();
+           });
+           clearListButton.disabled = true;
+        });
 
         shoppingList.appendChild(createNewListItem(trimmedValue));
         inputBox.value = '';
         addItemButton.disabled = true;
+        clearListButton.disabled = false;
         inputBox.className = 'empty';
-        inputBox.focus();
     });
+        inputBox.focus();
 });
 

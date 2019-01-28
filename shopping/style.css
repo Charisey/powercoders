@@ -18,12 +18,34 @@ li{
   margin-top: 10px;
 }
 
+body{
+    margin:0px;
+}
+
+ul{
+    position:absolute;
+}
+
+.fa-trash-alt{
+    margin-left:5px;
+}
+
 #head{
   position: relative;
   background: url('header.jpg') no-repeat center center;
   background-size: cover;
   height: 250px;
   margin-left: initial;
+}
+
+#background{
+    background:url("header3.png");
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    filter:blur(5px);
 }
 
 #text{
@@ -71,4 +93,4 @@ h1 {
     border: 3px solid #1b7121;
 }
 
-.
+

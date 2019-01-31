@@ -1,77 +1,115 @@
-function createNewListItem(itemName) {
+/**
+ * Creates and returns an 'li' element for inclusion in the shopping list.
+ *
+ * @param {{name: string, quantity: string}} item Item to append to the list
+ * @returns {HTMLElement} li element
+ */
+function createNewListItem(item) {
     const li = document.createElement('li');
     const span = document.createElement('span');
-    span.innerText = itemName;
+    span.innerText = item.name;
     li.appendChild(span);
+
+    if (item.quantity !== '') {
+        li.appendChild(document.createTextNode(' '));
+        const qSpan = document.createElement('span');
+        qSpan.innerText = '(' + item.quantity + ')';
+        li.appendChild(qSpan);
+    }
 
     const deleteButton = document.createElement('i');
     deleteButton.className = 'fas fa-trash-alt';
     li.appendChild(deleteButton);
 
-    deleteButton.addEventListener('click', function (event) {
+    deleteButton.addEventListener('click', function () {
         li.remove();
         document.getElementById("item").focus();
 
         const listItem = document.querySelectorAll('li');
         const clearListButton = document.querySelector('#clear');
-            clearListButton.disabled = listItem.length === 0;
+        clearListButton.disabled = listItem.length === 0;
     });
 
     document.querySelector('ul').appendChild(li);
     return li;
 }
-//ce qui est en rapport avec le click
-document.addEventListener('DOMContentLoaded', function (event) {
+
+function domContentLoaded() {
     const inputBox = document.getElementById('item');
-    const shoppingList =  document.querySelector('ul');
+    const shoppingList = document.querySelector('ul');
     const addItemButton = document.querySelector('#buttonAdd'); //s'il y a une id
     const clearListButton = document.querySelector('#clear');
+    const quantityBox = document.getElementById('quantity');
 
     addItemButton.disabled = true;
     clearListButton.disabled = true;
     inputBox.className = 'empty';
 
-    addItemButton.addEventListener('click', function (event) {
+    addItemButton.addEventListener('click', function () {
         const trimmedValue = inputBox.value.trim();
 
-        shoppingList.appendChild(createNewListItem(trimmedValue));
+        const item = {
+            name: trimmedValue,
+            quantity: quantityBox.value.trim()
+        };
+
+        shoppingList.appendChild(createNewListItem(item));
         inputBox.value = '';
         addItemButton.disabled = true;
         clearListButton.disabled = true;
+        quantityBox.value = '';
         inputBox.className = 'empty';
         inputBox.focus();
     });
 
-    inputBox.addEventListener('keyup', function (event) {
+    inputBox.addEventListener('keyup', onKeyup);
+
+    quantityBox.addEventListener('keyup', onKeyup);
+
+    clearListButton.addEventListener('click', function () {
+        const items = document.querySelectorAll('li');
+        items.forEach(function (element) {
+            element.remove();
+        });
+        inputBox.focus();
+        clearListButton.disabled = true;
+    });
+    inputBox.focus();
+
+    function onKeyup(event) {
         const trimmedValue = inputBox.value.trim();
         addItemButton.disabled = trimmedValue === '';
-
 
         if (trimmedValue === '') {
             inputBox.className = 'empty';
             return;
         }
 
-
         if (event.key !== 'Enter') {
             inputBox.className = '';
             return;
         }
 
-        clearListButton.addEventListener('click',  function (event) {
-           const ListItems = document.querySelectorAll('li');
-           ListItems.forEach(function(element){
-           element.remove();
-           });
-           clearListButton.disabled = true;
-        });
+        const item = {
+            name: trimmedValue,
+            quantity: quantityBox.value.trim()
+        };
 
-        shoppingList.appendChild(createNewListItem(trimmedValue));
+        shoppingList.appendChild(createNewListItem(item));
         inputBox.value = '';
         addItemButton.disabled = true;
         clearListButton.disabled = false;
+        quantityBox.value = '';
         inputBox.className = 'empty';
+    }
+
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+        domContentLoaded();
     });
-        inputBox.focus();
-});
+} else {
+    domContentLoaded();
+}
 

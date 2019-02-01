@@ -1,7 +1,19 @@
 /**
+ * Represent ab item in the shopping list.
+ *
+ * @param {string} name - Name of the item
+ * @param {string} quantity - Quantity of the item
+ * @constructor Return the object with name and quantity properties
+ */
+function ShoppingListItem(name, quantity) {
+    this.name = name;
+    this.quantity = quantity;
+}
+
+/**
  * Creates and returns an 'li' element for inclusion in the shopping list.
  *
- * @param {{name: string, quantity: string}} item Item to append to the list
+ * @param {ShoppingListItem} item Item to append to the list
  * @returns {HTMLElement} li element
  */
 function createNewListItem(item) {
@@ -48,10 +60,7 @@ function domContentLoaded() {
     addItemButton.addEventListener('click', function () {
         const trimmedValue = inputBox.value.trim();
 
-        const item = {
-            name: trimmedValue,
-            quantity: quantityBox.value.trim()
-        };
+        const item = new ShoppingListItem(trimmedValue, quantityBox.value.trim());
 
         shoppingList.appendChild(createNewListItem(item));
         inputBox.value = '';
@@ -90,10 +99,7 @@ function domContentLoaded() {
             return;
         }
 
-        const item = {
-            name: trimmedValue,
-            quantity: quantityBox.value.trim()
-        };
+        const item = new ShoppingListItem(trimmedValue, quantityBox.value.trim());
 
         shoppingList.appendChild(createNewListItem(item));
         inputBox.value = '';

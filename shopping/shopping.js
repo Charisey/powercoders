@@ -13,19 +13,18 @@ function ShoppingListItem(name, quantity) {
 /**
  * Creates and returns an 'li' element for inclusion in the shopping list.
  *
- * @param {ShoppingListItem} item Item to append to the list
  * @returns {HTMLElement} li element
  */
-function createNewListItem(item) {
+ShoppingListItem.prototype.toListItem = function () {
     const li = document.createElement('li');
     const span = document.createElement('span');
-    span.innerText = item.name;
+    span.innerText = this.name;
     li.appendChild(span);
 
-    if (item.quantity !== '') {
+    if (this.quantity !== '') {
         li.appendChild(document.createTextNode(' '));
         const qSpan = document.createElement('span');
-        qSpan.innerText = '(' + item.quantity + ')';
+        qSpan.innerText = '(' + this.quantity + ')';
         li.appendChild(qSpan);
     }
 
@@ -44,7 +43,7 @@ function createNewListItem(item) {
 
     document.querySelector('ul').appendChild(li);
     return li;
-}
+};
 
 function domContentLoaded() {
     const inputBox = document.getElementById('item');
@@ -62,7 +61,7 @@ function domContentLoaded() {
 
         const item = new ShoppingListItem(trimmedValue, quantityBox.value.trim());
 
-        shoppingList.appendChild(createNewListItem(item));
+        shoppingList.appendChild(item.toListItem());
         inputBox.value = '';
         addItemButton.disabled = true;
         clearListButton.disabled = true;
@@ -101,7 +100,7 @@ function domContentLoaded() {
 
         const item = new ShoppingListItem(trimmedValue, quantityBox.value.trim());
 
-        shoppingList.appendChild(createNewListItem(item));
+        shoppingList.appendChild(item.toListItem());
         inputBox.value = '';
         addItemButton.disabled = true;
         clearListButton.disabled = false;
@@ -118,4 +117,3 @@ if (document.readyState === 'loading') {
 } else {
     domContentLoaded();
 }
-

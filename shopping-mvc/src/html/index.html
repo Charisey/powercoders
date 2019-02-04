@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>shopping</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="../js/shopping-list-item.js" defer></script>
+    <script src="../js/view.js" defer></script>
+    <script src="../js/model.js" defer></script>
+    <script src="../js/controller.js" defer></script>
+    <script src="../js/ui.js" defer></script>
+  </head>
+
+  <body>
+  <div id="background"></div>
+  <div id ="head">
+    <div id="text"><p>Your Shopping list</p></div>
+  </div>
+    <div id ="box">
+      <h1><span class="titre">Shopping list</span></h1>
+      <div id="BBB">
+        <label for="item">Enter a new item:</label>    <!-- le for "item" ds le label dont être le même que le id ds le input; à l'occurance ici cest "item -->
+        <input type="text" id="item" placeholder="Type something to buy">
+        <input type="text" id="quantity" placeholder="Quantity">
+        <button id="buttonAdd" class="fas fa-cart-plus"> Add Item</button>
+        <button id="clear">Clear items</button>
+        <ul></ul>
+      </div>
+    </div>
+  </body>
+</html>

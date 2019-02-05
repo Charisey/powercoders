@@ -29,18 +29,9 @@ class ShoppingListItem{
             li.appendChild(qSpan);
         }
 
-        const deleteButton = document.createElement('i');
+        const deleteButton = document.createElement('button');
         deleteButton.className = 'fas fa-trash-alt';
         li.appendChild(deleteButton);
-
-        deleteButton.addEventListener('click', function () {
-            li.remove();
-            document.getElementById("item").focus();
-
-            const listItem = document.querySelectorAll('li');
-            const clearListButton = document.querySelector('#clear');
-            clearListButton.disabled = listItem.length === 0;
-        });
 
         document.querySelector('ul').appendChild(li);
         return li;

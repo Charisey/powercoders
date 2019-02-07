@@ -13,23 +13,23 @@ class View {
         /** @private {!Controller} App controller */
         this.controller_ = controller;
 
-        /**@private {HTMLElement} Shopping list element */
+        /**@private {!HTMLElement} Shopping list element */
         this.shoppingList_ = document.querySelector('ul');
 
-        /** @private {HTMLElement} Input widget for Items */
+        /** @private {!HTMLElement} Input widget for Items */
         this.inputBox_ = document.getElementById('item');
 
-        /** @private {HTMLElement} Input widget for quantity */
+        /** @private {!HTMLElement} Input widget for quantity */
         this.quantityBox_ = document.getElementById('quantity');
 
-        /** @private {HTMLElement} Button to add an item */
+        /** @private {!HTMLElement} Button to add an item */
         this.addItemButton_ = document.getElementById('add');
 
-        /** @private {!HTMLElement} Button to clear the list */
+        /** @private {!HTMLElement} Button to clear the list */ //etape 3 ajouter la propriete clearListButton
         this.clearListButton_ = document.getElementById('clear');
 
         this.addItemButton_.addEventListener('click', () => this.addItem());
-        this.clearListButton_.addEventListener('click(', () => this.controller_.clearList());
+        this.clearListButton_.addEventListener('click', () => this.controller_.clearList()); //etape 4: quand on click sur clear on appelle la method dans le controller (this.controller) qui est est .clearlist()
         this.inputBox_.addEventListener('keyup', (event) => this.onkeyup(event));
         this.quantityBox_.addEventListener('keyup', (event) => this.onkeyup(event));
 

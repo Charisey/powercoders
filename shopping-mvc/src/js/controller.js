@@ -32,7 +32,9 @@ class Controller {
     /**
      * Clear the shopping list.
      */
-    clearList() {
-        this.model_.clear();
+    //etape 2
+    clearList() { //suite du clear dans le view
+        this.model_.clear(); //on va chercher l objet qui contient .clear() dans notre cas c est model_
+    // quand on met un '.' on appelle une method
     }
 }

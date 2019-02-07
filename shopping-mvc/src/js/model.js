@@ -43,9 +43,11 @@ class Model {
     /**
      * Clear the shopping list of all items.
      */
-    clear(){
-        this.items_=[];
-        this.view_.update();
+    //etape 1 pour le clearbutton
+    clear(){ //pour le clearbutton on va le cree
+        this.items_=[]; //peu importe la valeur [] dns items,,, on va chercher les items
+        this.view_.update();//on va dire au views de faire les updates
+        //le controlleur aura bespin d une method qui appelle celle-ci
     }
 }
 

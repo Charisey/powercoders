@@ -3,7 +3,7 @@
  */
 class Controller {
     constructor (){
-        console.log('Controlleur running!');
+        console.log('Controller running!');
 
         /**@private {!Model} Application model*/
         this.model_ = new Model(this);
@@ -27,5 +27,12 @@ class Controller {
      */
     deleteItem(i) {
         this.model_.delete(i);
+    }
+
+    /**
+     * Clear the shopping list.
+     */
+    clearList() {
+        this.model_.clear();
     }
 }
